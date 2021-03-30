@@ -1,0 +1,14 @@
+p {
+    border: 1px solid red;
+    outline-style: dotted;
+    outline-color: lightgreen;
+    outline-width: 2px;
+    margin: 7px;
+}
+
+div{
+	border: 3px solid rgba(224,255,255,255);
+	border-top: none;
+	border-bottom: none;
+	position: absolute;
+}

@@ -1,0 +1,126 @@
+#welcome-section {
+  background-color: #e6f3ff;
+  overflow: auto;
+  height: 100vh;
+  width: 100%;
+  border: solid black;
+  border-radius: 20px;
+}
+
+.contact-button {
+  width: 80px;
+  height: 80px;
+  margin-left: 40%;
+  border-radius: 40px;
+  border: solid #008000;
+}
+
+#profile-link {
+  width: 160px;
+  height: 45px;
+  font-family: monospace;
+  font-size: 20px;
+  border: solid #008000;
+  border-radius: 5px;
+  color: #008000;
+}
+
+#work-name {
+  margin-top: 245px;
+  font-size: 30px;
+}
+
+#work-info {
+  font-size: 16px;
+  color: #008000;
+}
+
+#footer {
+  height: 100px;
+  background-color: #F0F0F0;
+  border: solid black;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#footer-text {
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.text {
+  color: #e6f3ff;
+  background-color: black;
+}
+
+#page-wrapper {
+  font-family: monospace;
+}
+
+#welcome-info {
+  font-size: 16px;
+  color: #008000;
+}
+
+.img {
+  width: 300px;
+  height: 200px;
+  border: 3px solid black;
+  border-radius: 20px;
+}
+
+.tile-title {
+  color: #000;
+}
+
+#contact {
+  background-color: #e6f3ff;
+  overflow: auto;
+  height: 100vh;
+  width: 100%;
+}
+
+.nav-link {
+  color: #e6f3ff;
+  font-size: 20px;
+  margin-left: 110px;
+}
+
+#link {
+  postion: fixed;
+  margin-left: 58%;
+  margin-top: 18px;
+}
+
+#nav-div {
+ top: 0;
+ left: 0; 
+ background-color: black;
+ position: fixed;
+ width: 100%; 
+ height: 65px; 
+}
+
+#welcome-name {
+  margin-top: 245px;
+  font-size: 30px;
+}
+
+.welcome-text {
+  font-family: monospace;
+  margin-left: auto;
+  text-align: center;
+}
+
+.fa {  
+  padding: 5px;  
+  text-align: center;  
+  font-size: 30px;  
+  width: 20px;
+  margin-left: 15%;
+  color: black;
+} 
+
+h2 a{
+  color: black;
+}

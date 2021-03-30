@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Oswald:400');
+body{
+  font-family: 'Oswald', sans-serif;
+  background-color: lightgrey;
+}
+h1{
+  margin: auto;
+  text-align:center;
+  font-weight: 400;
+  font-family: 'Oswald', sans-serif;
+  font-size: 60px;
+  color: white;
+  padding: 20px;
+  width: 80%;
+}
+
+h2{
+  text-align: center;
+}
+
+#img-circle{
+  max-height: 325px;
+  max-width: 325px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+
+#main{
+      color: white;
+      margin: 50px 10%;
+      height: 90%;
+      width: 80%;
+      align-items: center;
+      background-color: #00203fff;
+      padding: 20px;
+      border-radius: 10px;
+}
+
+#link{ 
+  display: block;
+  text-decoration: none;
+  font-size: 20px; 
+  color: #fff;
+  background: #e74c3c; 
+  width: 20%; 
+  text-align: center; 
+  padding: 1rem 2rem;
+  margin: auto; 
+  border-radius: 3px; 
+  text-transform: uppercase; 
+  transition: all 0.2s;
+  box-sizing: border-box;
+  border-radius: 10px; 
+}
+
+p{
+  font-size: 25px;
+}
+
+ul{
+  margin-left: 100px;
+}
+  
+li {
+    display: block;
+    font-size: 20px;
+    color: white;
+    padding-top: 7px;
+    }
+          
+li:hover {
+background-color: rgba(204,204,204, 0.3);
+transform: scale(1.1);
+}
+
+li:hover > .date {
+  color: red;
+}
+
+.date {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Oswald', sans-serif;
+  color: #BDC3C7;
+  margin-bottom: 0;
+}
+
+.timeline {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
+      background-color: #00203fff;
+      padding: 20px;
+      margin: 50px 10%;
+      margin-top: 10px;
+      width: 80%;
+      padding: 20px;
+      border-radius: 10px;
+    }
+      
+.time-line-container {
+  width: 60%;
+  padding: 1em 0;
+}
+  
+  .time-line {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+  }
+  

@@ -1,0 +1,16 @@
+h1{
+	background-color: rgba(100,149,237,255);
+	margin: 0px;
+	padding-bottom: 20px;
+}
+
+div{
+	background-color: rgba(176,196,222,255);
+	padding-bottom: 20px;
+}
+
+p{
+	background-color: rgba(224,255,255,255);
+	margin: 0px;
+	padding-bottom: 20px;
+}

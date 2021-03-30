@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Form</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+	</style>
+	<link rel="stylesheet" type="text/css" href="css2.css">
+</head>
+<body>
+
+	<h1>
+		Survey Form
+	</h1>
+	<div class="main">
+		<form>
+			<div class="form-field">
+				Name 
+				<input type="text"  class="align" name="name" placeholder="Enter your name" required>
+			</div>
+			<div class="form-field">
+				Email
+				<input type="email" class="align" name="email" placeholder="Enter your email" required>
+			</div>
+			<div class="form-field">
+				Age&nbsp;&nbsp;&nbsp;
+				<input type="number" class="align" name="age" placeholder="Age" required>
+			</div>
+			<div class="form-field">
+				Which option best describes your current role?
+				<br>
+				<select name="role" id="dropdown" required>
+				  <option disabled selected value>Select current role</option>
+				  <option value="student">Student</option>
+				  <option value="job">Full Time Job</option>
+				  <option value="learner">Learning New Skills</option>
+				  <option value="other">Other</option>
+				</select>
+			</div>
+			<div class="form-field">Would you recommend this website to a friend?
+				<br>
+				<input type="radio" name="recommend" value="Yes"> Yes
+				<input type="radio" name="recommend" value="No">  No
+				<input type="radio" name="recommend" value="Maybe"> Maybe
+			</div>
+			<div class="form-field">
+				What would you like to see improved? (Check all that apply)
+				<br>
+				
+				<input type="checkbox" name="prefer" class="prefer">Design
+				<br>&nbsp;
+				<input type="checkbox" name="prefer" class="prefer">Projects
+				<br>&nbsp;
+				<input type="checkbox" name="prefer" class="prefer">Content
+				<br>
+				<input type="checkbox" name="prefer" class="prefer">Videos
+			</div>
+			<div class="form-field">
+				Any comments or suggestions?
+				<textarea placeholder="Enter your suggestions"></textarea>
+			<button type="submit" id="submit">
+        	Submit
+      		</button>
+		</form>
+	</div>
+</body>
+</html>
