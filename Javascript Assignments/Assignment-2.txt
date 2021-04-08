@@ -1,0 +1,134 @@
+﻿Functional Programming
+
+
+Basic Exercises
+
+
+1.  
+function square(x){
+    return x*x;
+}
+
+
+function double(x){
+    return 2*x;
+}
+
+
+function composedValue(square, double, x){
+    x=parseInt(x);
+    return square(double(x));
+}
+
+
+console.log(composedValue(square, double, 20));
+
+
+2.  
+function compose(f, g) {
+    return function(x) {
+      return f(g(x));
+    };
+  }
+  
+function square(x){
+    return x*x;
+}
+
+
+function double(x){
+    return 2*x;
+}
+
+
+var f = compose(square, double);
+console.log(f(50));
+3.  
+function find(arr, isEven){
+    n=arr.length;
+    for(i=0; i<n; i++){
+        if (isEven(arr[i])){
+            
+            break;
+        }
+    }
+    return arr[i];
+}
+function isEven(n){
+    return (n%2==0);
+}
+
+
+arr=[4,1,2,4,5,6,7]
+console.log(find(arr, isEven));
+ 
+4.  
+function map(arr, square){
+    n=arr.length;
+    for(i=0; i<n; i++){
+        arr[i] = square(arr[i]);
+        }
+    return arr;
+    }
+    
+
+
+function square(n){
+    return n**2;
+}
+
+
+arr = [4,1,2,4,5,6,7]
+console.log(map(arr, square));
+
+
+
+
+
+
+
+
+Advanced Exercises
+
+
+
+
+1.  
+function find(arr, isEven){
+    n = arr.length;
+    curr = arr.slice(0,1)[0];
+    if (isEven(curr)){
+        return curr;
+    }
+    return find(arr.slice(1,n),isEven);
+}
+function isEven(n){
+    return (n%2==0);
+}
+ 
+arr=[4,1,2,4,5,6,7]
+console.log(find(arr, isEven));
+
+
+2.  
+arr2 = [];
+function map(arr, square){
+    n=arr.length;
+    if(n>0){
+        arr2[n-1] = square(arr.slice(-1)[0]);
+        arr = arr.slice(0,n-1);
+        return map(arr,square);
+    }
+    return arr2;
+}
+    
+function square(n){
+    return n**2;
+}
+ 
+arr = [4,1,2,4,5,6,7]
+console.log(map(arr, square));
+  
+3.  
+function square(){return String(square); }
+square();
