@@ -1,0 +1,123 @@
+﻿ES6 Assignment-1
+1.  
+const num =10;
+Can’t be reassigned.
+2.  
+let num;
+function findSeven(num){
+   if(num === 7){
+      var s = "It's seven"
+   }
+}
+console.log(s);
+
+
+3.  
+var order = {
+    id: 1,
+    title: "A", 
+    price: 30 
+ }
+order.printOrder = function() {
+    console.log(order.id, order.title, order.price);
+ };
+order.getPrice = function() {
+    console.log(order.price);
+ };
+ const order2 = Object.assign({}, order);
+ console.log(order2);
+4.   
+let names = ['Tom', 'Ivan', 'Jerry'];
+const objectArray = names.map((str) => ({ name: str, length: str.length }))
+console.log(objectArray);
+ 
+5. a)
+function add(a=1, b = 1) { return a + b; }
+    console.log(add(6,5));
+    console.log(add());
+
+
+b)
+function userFriends(username, ...userFriends){
+    console.log(username);
+    console.log(userFriends);}
+
+
+userFriends("A", ["B", "C", "D", "E", "F"]);
+c)
+let printCapitalNames = function(...names){
+    for(let i in names){
+        console.log(names[i].toUpperCase());
+    }
+}
+
+
+var names = ["abc", "def", "ghi", "jkl", "mno"];
+printCapitalNames(...names);
+
+
+
+
+
+
+6.  
+let laptopModel = "hp-g7";
+let deskNo = 71;
+let myName = "abcd";
+let draftMessage = `Hi Sysnet!,I am ${myName} and there is an issue with my laptop: ${laptopModel} on desk number: ${deskNo}`;
+console.log(draftMessage);
+
+
+
+
+7.  a) 
+let arr = [1,2,3,5];
+let [first, second, third, fourth] = arr;
+console.log(third);
+b)
+const organization = {companyName:"Google", address:{city:"Mountain View", pincode:"94040"}};
+let {companyName,address:{city,pincode}} = organization;
+console.log(pincode);
+
+
+8.   
+var BalanceOfAllAccounts = [];
+class Account{
+    constructor(id, name, balance){
+        this.id = id;
+        this.name = name;
+        this.balance = balance;
+        BalanceOfAllAccounts.push(balance);
+    }
+}
+ 
+class SavingAccount extends Account{
+    constructor(id, name, balance, interest){
+        super(id, name, balance);
+        this.interest = interest;
+    }
+}
+class CurrentAccount extends Account{
+    constructor(id, name, balance, cashCredit){
+        super(id, name, balance);
+        this.cashCredit = cashCredit;
+    }
+}
+ 
+let c1 = new CurrentAccount(1, "a", 1000, 400);
+let c2 = new CurrentAccount(2, "b", 2000, 400);
+let c3 = new CurrentAccount(3, "c", 5000, 400);
+let c4 = new CurrentAccount(4, "d", 4000, 400);
+let c5 = new CurrentAccount(5, "e", 6000, 400);
+ 
+let s1 = new SavingAccount(6, "p", 10000, 5);
+let s2 = new SavingAccount(6, "q", 6000, 5);
+let s3 = new SavingAccount(6, "r", 8000, 5);
+let s4 = new SavingAccount(6, "s", 5000, 5);
+ 
+function totalBalanceInBank(){
+    console.log(BalanceOfAllAccounts.reduce((a, b) => a + b, 0));
+}
+
+
+totalBalanceInBank();

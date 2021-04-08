@@ -1,0 +1,83 @@
+﻿ES6 & TypeScript Assignment-3
+
+
+1.  
+let x = Promise.resolve(37);
+let y = Promise.resolve(21)
+
+
+Promise.all([x, y]).then(values => {
+    const sum = values.reduce((a,b) => a+b);
+    console.log(sum);
+}); 
+
+
+2.  
+var BalanceOfAllAccounts = [];
+class Account{
+    constructor(public Id:number, name: string, balance:number){
+        BalanceOfAllAccounts.push(balance);
+    }
+}
+ 
+class SavingAccount extends Account{
+    constructor(Id, name, balance, interest:number){
+        super(Id, name, balance);
+    }
+}
+ 
+class CurrentAccount extends Account{
+    constructor(Id, name, balance, cashCredit:number){
+        super(Id, name, balance);
+    }
+}
+ 
+let c1 = new CurrentAccount(1, "a", 1000, 400);
+let c2 = new CurrentAccount(2, "b", 2000, 400);
+let c3 = new CurrentAccount(3, "c", 5000, 400);
+let c4 = new CurrentAccount(4, "d", 4000, 400);
+let c5 = new CurrentAccount(5, "e", 6000, 400);
+ 
+let s1 = new SavingAccount(6, "p", 10000, 5);
+let s2 = new SavingAccount(6, "q", 6000, 5);
+let s3 = new SavingAccount(6, "r", 8000, 5);
+let s4 = new SavingAccount(6, "s", 5000, 5);
+ 
+function totalBalanceInBank(){
+    console.log(BalanceOfAllAccounts.reduce((a, b) => a + b, 0));
+}
+ 
+totalBalanceInBank();
+
+
+3.  
+interface Printable{
+    fname : string,
+    lname : string
+}
+
+
+let circle:Printable = {
+    fname: "round",
+    lname: "circle"
+}
+
+
+let employee:Printable = {
+    fname: "aba",
+    lname: "cir"
+}
+
+
+function printAll() {
+    function print(a){
+        console.log(a);
+    }
+    
+    for(var i in arguments){
+      print(arguments[i]);
+    }
+  }
+
+
+printAll(circle, employee);
