@@ -1,0 +1,37 @@
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Success</strong> Your Restaurant has been entered successfully.
+  <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">name</th>
+        <th scope="col">Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let item of collection">
+          <th>{{item.id}}</th>
+          <th>{{item.name}}</th>
+          <th>
+            <i (click)="deleteRestaurant(item.id)" class="fa fa-trash" style="font-size:20px;color:red; padding-right: 10px;"></i>
+            <a routerLink="/update/{{item.id}}">
+              <i class="fa fa-edit" style="font-size:20px;color:blue;"></i>
+            </a>
+          </th>
+          
+      </tr>
+    </tbody>
+  </table>
+
+  <form [formGroup]="addRestaurant" (ngSubmit)="collectRestaurant()">
+    <div class="form-group">
+      <label>Add Restaurant</label>
+      <input type="text" class="form-control" placeholder="Enter Restaurant name" formControlName="name">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

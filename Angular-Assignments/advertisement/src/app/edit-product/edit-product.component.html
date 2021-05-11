@@ -1,0 +1,22 @@
+<h3>Edit Ad</h3>    
+<form [formGroup]="editAd" (ngSubmit)="collection()">
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" class="form-control" placeholder="Enter Title" formControlName="title">
+
+      <label>Name</label>
+      <input type="text" class="form-control" placeholder="Your Name" formControlName="name">
+
+      <label>Category</label>
+        <select required formControlName="category">
+          <option value="Furniture" selected>Furniture</option>
+          <option value="Hardware">Hardware</option>
+          <option value="Mobile">Mobile</option>
+        </select>
+        <br>
+      <label>Description</label>
+      <input type="text" id="desc" class="form-control" placeholder="Describe the advertisement" formControlName="description">
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a routerLink="/list"><button class="btn btn-danger" > Cancel</button></a>
+  </form> 

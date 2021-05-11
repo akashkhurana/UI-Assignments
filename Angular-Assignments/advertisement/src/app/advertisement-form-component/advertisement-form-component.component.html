@@ -1,0 +1,27 @@
+<h3>Add new Advertisement</h3>
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Success</strong> Your Ad has been entered successfully.
+  <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<form [formGroup]="addAdv" (ngSubmit)="collectAdv()">
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" class="form-control" placeholder="Enter Title" formControlName="title">
+
+      <label>Name</label>
+      <input type="text" class="form-control" placeholder="Your Name" formControlName="name">
+
+      <label>Category</label>
+        <select required formControlName="category">
+          <option value="Furniture" selected>Furniture</option>
+          <option value="Hardware">Hardware</option>
+          <option value="Mobile">Mobile</option>
+        </select>
+        <br>
+      <label>Description</label>
+      <input type="text" id="desc" class="form-control" placeholder="Describe the advertisement" formControlName="description">
+    </div>
+    <button type="submit" class="btn btn-primary" onclick="window.location.reload();">Submit</button>
+  </form>
