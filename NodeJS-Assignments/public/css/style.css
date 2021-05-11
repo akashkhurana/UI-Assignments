@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+html{
+  scroll-behavior: smooth;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+}
+
+a { text-decoration: none; }
+
+.grocery{
+  padding: 16px;
+  width: 98%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: center;
+}
+
+.checkboxbtn {
+  list-style-type: none;
+  margin-top: 20px;
+  margin-left: 120px;
+  padding: 0;
+}
+.checkboxbtn li {
+  float: left;
+  margin: 0 10px 0 0;
+  width: 100px;
+  height: 40px;
+  position: relative;
+}
+.checkboxbtn label, .checkboxbtn input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+} 
+.checkboxbtn input[type="checkbox"] {
+  opacity: 0.01;
+  z-index: 100;
+}
+.checkboxbtn input[type="checkbox"]:checked+label, .Checked+label {
+  background: #5cb85c;
+  color: white;
+}
+.checkboxbtn label {
+  padding: 2px;
+  border: 1px solid white;
+  color: teal;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 90;
+}
+.checkboxbtn label:hover {
+  background: teal;
+  color: white;
+}
+input[type="submit"], a {
+    padding: 12px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+input[type='submit'], a {
+    color: white;
+    border: 1px solid #ddd;
+    background-color: teal;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+input[type='submit']:hover, a:hover {
+    background-color: white;
+    color: teal;
+}
